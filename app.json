@@ -1,7 +1,7 @@
 {
   "logo":"https://g.top4top.io/p_23787w6g31.jpg",
   "name": "YT-Downloader",
-  "description": "A member tagger bot for telegram Groups.",
+  "description": "- بوت تحميل من يوتيوب .",
   "env": {
     "TOKEN": {
       "description": "Enter bot token Get It From @botfather.",
