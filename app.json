@@ -11,11 +11,6 @@
       "description": "Get this value from my.telegram.org! Please do not steal.",
       "value": ""
     },
-    "Sudo_id": {
-      "description": "قم بوضع ايدي المطور الاساسي",
-      "required": true,
-      "value": "5541009328"
-    },
     "API_HASH": {
       "description": "Get this value from my.telegram.org! Please do not steal.",
       "value": ""
