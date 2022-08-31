@@ -1,8 +1,14 @@
 from pyrogram import Client, filters as ay
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from yt_dlp import YoutubeDL
 from requests import get
 import os, wget
+from pyrogram.types import (
+   InlineKeyboardMarkup,
+   InlineKeyboardButton,
+   InlineQuery,
+   InlineQueryResultArticle,
+   InputTextMessageContent,
+)
 
 api_id = int(os.environ.get("APP_ID"))
 api_hash = os.environ.get("API_HASH")
