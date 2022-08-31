@@ -11,7 +11,7 @@ token = os.environ.get("TOKEN")
 app = Client("yt", bot_token=token, api_id = api_id, api_hash = api_hash)
 
 Sudo_id = '5541009328'
-@bot.on_message(ay.command("start"))
+@app.on_message(ay.command("start"))
 async def start(client, message):
    await message.reply_text(
       "اهلا انا بوت تحميل من يوتيوب\nاستطيع رفع فيديوهات حتا 2GB\nفقط ارسل رابط التحميل وساقوم بالتحميل ورفعه لك",
@@ -26,7 +26,7 @@ async def start(client, message):
    )
    await client.send_message(chat_id=Sudo_id,text=f"العضو : {message.from_user.mention()}\nضغط start في بوتك\nالايدي : `{message.from_user.id}`")
 
-@bot.on_message(ay.regex(r"^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$"))
+@app.on_message(ay.regex(r"^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$"))
 async def ytdl(client, message):
    await message.reply_text(
       f"رابط المقطع : {message.text}",disable_web_page_preview=True,
@@ -40,7 +40,7 @@ async def ytdl(client, message):
       )
    )
 
-@bot.on_callback_query(ay.regex("video"))
+@app.on_callback_query(ay.regex("video"))
 async def VideoDownLoad(client, callback_query):
    await callback_query.edit_message_text("انتظر")
    try:
@@ -64,7 +64,7 @@ async def VideoDownLoad(client, callback_query):
    await callback_query.edit_message_text("تم الارسال")
    os.remove(video_file)
 
-@bot.on_callback_query(ay.regex("audio"))
+@app.on_callback_query(ay.regex("audio"))
 async def AudioDownLoad(client, callback_query):
    await callback_query.edit_message_text("انتظر")
    try:
@@ -93,7 +93,7 @@ async def AudioDownLoad(client, callback_query):
    os.remove(thumb)
 
 
-@bot.on_message(ay.command("بحث",None))
+@app.on_message(ay.command("بحث",None))
 async def search(client, message):
     try:
         query = message.text.split(None, 1)[1]
@@ -116,7 +116,7 @@ async def search(client, message):
     except Exception as e:
         await m.edit(str(e))
 
-@bot.on_inline_query()
+@app.on_inline_query()
 async def inline(client, query: InlineQuery):
     answers = []
     search_query = query.query.lower().strip().rstrip()
