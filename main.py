@@ -162,4 +162,4 @@ async def inline(client, query: InlineQuery):
             )
 
 print("البوت اشتغل غور")
-bot.run()
+app.run()
