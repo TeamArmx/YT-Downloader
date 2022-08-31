@@ -161,6 +161,9 @@ async def inline(client, query: InlineQuery):
                 switch_pm_text="Error: search timed out",
                 switch_pm_parameter="",
             )
+            
+video = {"format": "best","keepvideo": True,"prefer_ffmpeg": False,"geo_bypass": True,"outtmpl": "%(title)s.%(ext)s","quite": True}
+audio = {"format": "bestaudio","keepvideo": False,"prefer_ffmpeg": False,"geo_bypass": True,"outtmpl": "%(title)s.mp3","quite": True}
 
 print("البوت اشتغل غور")
 app.run()
