@@ -21,12 +21,12 @@ Sudo_id = '5541009328'
 @app.on_message(ay.command("start"))
 async def start(client, message):
    await message.reply_text(
-      "اهلا انا بوت تحميل من يوتيوب\nاستطيع رفع فيديوهات حتا 2GB\nفقط ارسل رابط التحميل وساقوم بالتحميل ورفعه لك",
+      "- اهلا بك عزيزي .\n- انا بوت تحميل من اليوتيوب .\n- ارسل فقط رابط الفيديو وارفعه لك .\n- يمكنك البحث في اليوتيوب من خلال كتابه .\n- بحث ثم النص : مثال \nبحث ويجز",
       reply_markup=InlineKeyboardMarkup(
          [
             [
                InlineKeyboardButton("𝙑 𝙄 𝙍 𝙐 𝙎", url=f"https://t.me/VR_LA"),
-               InlineKeyboardButton("𓄼𝐒𝐎𝐔𝐑𝐂𝐄༒ڪـٵڔﻣـن𓄹", url=f"https://t.me/YDDCJ"),
+               InlineKeyboardButton("𓄼ڪـٵڔﻣـن𓄹", url=f"https://t.me/YDDCJ"),
             ]
          ]
       )
@@ -119,7 +119,7 @@ async def search(client, message):
             text += f"القناه : {results[i]['channel']}\n"
             text += f"الرابط : https://www.youtube.com{results[i]['url_suffix']}\n\n"
             i += 1
-        await m.edit(text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("قناه البوت", url="https://t.me/YYYBR")]]), disable_web_page_preview=True)
+        await m.edit(text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("قناه البوت", url="https://t.me/YDDCJ")]]), disable_web_page_preview=True)
     except Exception as e:
         await m.edit(str(e))
 
