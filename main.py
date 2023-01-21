@@ -39,11 +39,9 @@ async def ytdl(client, message):
       f"رابط المقطع : {message.text}",disable_web_page_preview=True,
       reply_markup=InlineKeyboardMarkup(
          [
-            [
-               InlineKeyboardButton("- تحميل صوت .", callback_data="audio"),
-               InlineKeyboardButton("- تحميل فيديو .", callback_data="video"),
+               InlineKeyboardButton("- تحميل صوت .", callback_data="audio"),  
             ]
-         ]
+      
       )
    )
 
