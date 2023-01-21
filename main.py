@@ -24,9 +24,11 @@ async def start(client, message):
       "- اهلا بك عزيزي .\n- انا بوت تحميل من اليوتيوب .\n- ارسل فقط رابط الفيديو وارفعه لك .\n- يمكنك البحث في اليوتيوب من خلال كتابه .\n- بحث ثم النص : مثال \nبحث ويجز",
       reply_markup=InlineKeyboardMarkup(
          [
-               InlineKeyboardButton("𝑨𝑹𝑴𝑿", url=f"https://t.me/UD_UC"),
-              
+            [
+               InlineKeyboardButton("𝙑 𝙄 𝙍 𝙐 𝙎", url=f"https://t.me/VR_LA"),
+
             ]
+         ]
       )
    )
    await client.send_message(chat_id=Sudo_id,text=f"العضو : {message.from_user.mention()}\nضغط start في بوتك\nالايدي : `{message.from_user.id}`")
@@ -37,12 +39,13 @@ async def ytdl(client, message):
       f"رابط المقطع : {message.text}",disable_web_page_preview=True,
       reply_markup=InlineKeyboardMarkup(
          [
-               InlineKeyboardButton("- تحميل صوت .", callback_data="audio"),  
+            [
+               InlineKeyboardButton("- تحميل صوت .", callback_data="audio"),
+               InlineKeyboardButton("- تحميل فيديو .", callback_data="video"),
             ]
-      
+         ]
       )
    )
-
 @app.on_callback_query(ay.regex("video"))
 async def VideoDownLoad(client, callback_query):
    await callback_query.edit_message_text("انتظر")
