@@ -24,11 +24,9 @@ async def start(client, message):
       "- اهلا بك عزيزي .\n- انا بوت تحميل من اليوتيوب .\n- ارسل فقط رابط الفيديو وارفعه لك .\n- يمكنك البحث في اليوتيوب من خلال كتابه .\n- بحث ثم النص : مثال \nبحث ويجز",
       reply_markup=InlineKeyboardMarkup(
          [
-            [
-               InlineKeyboardButton("𝙑 𝙄 𝙍 𝙐 𝙎", url=f"https://t.me/VR_LA"),
-               InlineKeyboardButton("𓄼ڪـٵڔﻣـن𓄹", url=f"https://t.me/YDDCJ"),
+               InlineKeyboardButton("𝑨𝑹𝑴𝑿", url=f"https://t.me/UD_UC"),
+              
             ]
-         ]
       )
    )
    await client.send_message(chat_id=Sudo_id,text=f"العضو : {message.from_user.mention()}\nضغط start في بوتك\nالايدي : `{message.from_user.id}`")
