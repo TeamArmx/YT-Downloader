@@ -17,7 +17,7 @@ token = os.environ.get("TOKEN")
 
 app = Client("yt", bot_token=token, api_id = api_id, api_hash = api_hash)
 
-Sudo_id = '5541009328'
+Sudo_id = '5578310204'
 @app.on_message(ay.command("start"))
 async def start(client, message):
    await message.reply_text(
