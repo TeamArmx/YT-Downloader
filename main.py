@@ -1,7 +1,7 @@
 from pyrogram import Client, filters as ay
-from yr-dlp import YoutubeDL
+from yt-dlp import YoutubeDL
 from requests import get
-from rmx_search import YoutubeSearch
+from youtube_search import YoutubeSearch
 import os, wget
 from pyrogram.types import (
    InlineKeyboardMarkup,
