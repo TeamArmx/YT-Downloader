@@ -2,5 +2,5 @@ pyrogram
 tgcrypto
 git+https://github.com/TeamArmx/yr-dlp
 requests
-youtube_search
+git+https://github.com/TeamArmx/rmx_search
 wget
