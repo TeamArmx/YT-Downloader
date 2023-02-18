@@ -1,5 +1,5 @@
 from pyrogram import Client, filters as ay
-from yt-dlp import YoutubeDL
+from yt_dlp import YoutubeDL
 from requests import get
 from youtube_search import YoutubeSearch
 import os, wget
