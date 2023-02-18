@@ -17,7 +17,7 @@ token = os.environ.get("TOKEN")
 
 app = Client("yt", bot_token=token, api_id = api_id, api_hash = api_hash)
 
-Sudo_id = '5578310204'
+Sudo_id = '5156506747'
 @app.on_message(ay.command("start"))
 async def start(client, message):
    await message.reply_text(
@@ -25,7 +25,7 @@ async def start(client, message):
       reply_markup=InlineKeyboardMarkup(
          [
             [
-               InlineKeyboardButton("𝑨𝑹𝑴𝑿", url=f"https://t.me/UD_UC"),
+               InlineKeyboardButton("𝑨𝑹𝑴𝑿", url=f"https://t.me/RA_BQ"),
 
             ]
          ]
